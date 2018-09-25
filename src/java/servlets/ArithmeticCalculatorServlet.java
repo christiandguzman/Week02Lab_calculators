@@ -61,10 +61,12 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         request.setAttribute("x",xnum);
        
         getServletContext().getRequestDispatcher("/WEB-INF/ArithmeticCalculator.jsp").forward(request, response);  
+       
+        
+        
         }catch(NumberFormatException e){
             request.setAttribute("message", "Invalid");
             getServletContext().getRequestDispatcher("/WEB-INF/ArithmeticCalculator.jsp").forward(request, response);
         }
-    }
-    
+    }   
 }
